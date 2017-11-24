@@ -1,8 +1,6 @@
 %%first.m, for initializing;
-%synapse_size = 600; % 200, 400, 600
-%cleft_geo='c';
-%pos=5; %5 for center release and 9 for edge release
-%R='i';
+
+
 Dglut2=0.4;% Dglut value for outer region of cleft? \n - zone2 
 Dglut3=0.4;% Dglut value for inner region of cleft? \n - zone1
 %Dglut2=0.1;%  High affinity edge
@@ -104,38 +102,7 @@ end
 %Set Diffusion constants, Dglut1 is outside the cleft and Dglut2 is inside
 %the cleft. dt = 0.2 microseconds. 
 Dglut1=0.75;    %Outside the cleft
-%Dglut2 = input('Dglut value for outer region of cleft? \n');
-%Dglut2=0.40;    %Outer region of cleft
-%Dglut3 = input('Dglut value for inner region of cleft? \n');
-%Dglut3=0.2;    %Innermsot region of cleft
-
-%dx=0.16;
-%dx=0.08;
-%dx=0.04; 
-%dx=0.02;
 dx=0.01; %0.01 micrometer or 10 nm 
-%dx=0.005; 
-%dx=0.0025; 
-
-%dt=2e-5; %2e-5 ms or 0.02 microseconds
-
-%dt = 0.01;
-%dt = 0.005;
-%dt = 0.0025;
-%dt = 0.00125;
-%dt = 0.000625;
-%dt = 0.0003125;
-%dt = 0.00015625;
-%dt = 0.000078125;
-%dt = 5.8594e-05;
-
-%start stable
-%dt = 3.90625E-05;
-%dt = 1.95313E-05;
-%dt = 4e-5;
-%dt=2e-5;
-%dt=1e-5;
-%dt = 5e-6;
 dt=2e-5; 
 
 
