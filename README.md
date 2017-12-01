@@ -38,7 +38,9 @@ Modeling-of-Neurotransmissions for Indepentdent Evoked and Spontaneous Release t
        
        Run 
        
-      ex) [Time_13,probM_13,totM_13]=NMDA_kinetics(R_dual(:,13),Ndt,av,inc);
+      ex) 
+      
+          [Time_13,probM_13,totM_13]=NMDA_kinetics(R_dual(:,13),Ndt,av,inc);
           [Time_25,probM_25,totM_25]=NMDA_kinetics(R_dual(:,25),Ndt,av,inc);
        
 
