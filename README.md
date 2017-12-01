@@ -52,9 +52,9 @@ Modeling-of-Neurotransmissions for Indepentdent Evoked and Spontaneous Release t
         plot(probM_25,'b-.');hold on;
         figure(gcf)
         set(gca,'XTickLabel',[0 10 20 30 40 50 60 70 80 90 100]);
-        title('Open probabilities released From Center Presynaptic Terminal')
-        xlabel('Time')
-        ylabel('Open Probability')
+        title('Open probabilities released From Center Presynaptic Terminal');
+        xlabel('Time');
+        ylabel('Open Probability');
 
 
 
