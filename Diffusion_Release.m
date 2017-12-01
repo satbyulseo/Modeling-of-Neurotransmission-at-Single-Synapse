@@ -1,25 +1,10 @@
-%%first.m, for initializing;
-
-
-Dglut2=0.4;% Dglut value for outer region of cleft? \n - zone2 
-Dglut3=0.4;% Dglut value for inner region of cleft? \n - zone1
-%Dglut2=0.1;%  High affinity edge
-%Dglut3=0.1;% High affinity center
+%% Parameters for diffusion of glutamate
 tin=0;
 tf=10000;
-%Ndt=100;
-%av=10;
-%inc=2e-4; %ms
 Ndt=50000;
 av=10;
 inc=2e-3; %ms
-
-
-
-
-
-%% Parameters for diffusion of glutamate
-%%
+cleft_geo='f' ;
 
 %% Size of Synapse
 synapse_size = input('Size of synapse, 200, 400, or 600 nm? \n');
@@ -75,7 +60,7 @@ end
 %%
 
 %% Geometry of cleft, reduced edge or middle?
-cleft_geo = input('Reduce the cleft on outer edge (e), center (c), or flat (f)?\n','s');
+%cleft_geo = input('Reduce the cleft on outer edge (e), center (c), or flat (f)?\n','s');
 %%
 
 %% Release location
@@ -102,13 +87,18 @@ end
 %Set Diffusion constants, Dglut1 is outside the cleft and Dglut2 is inside
 %the cleft. dt = 0.2 microseconds. 
 Dglut1=0.75;    %Outside the cleft
+Dglut2 = input('Dglut value for outer region of cleft? \n');
+%Dglut2=0.40;    %Outer region of cleft
+Dglut3 = input('Dglut value for inner region of cleft? \n');
+%Dglut3=0.2;    %Innermsot region of cleft
+
 dx=0.01; %0.01 micrometer or 10 nm 
 dt=2e-5; 
 
 
-D1=(Dglut1*dt)/(dx)^2
-D2=(Dglut2*dt)/(dx)^2
-D3=(Dglut3*dt)/(dx)^2
+D1=(Dglut1*dt)/(dx)^2;
+D2=(Dglut2*dt)/(dx)^2;
+D3=(Dglut3*dt)/(dx)^2;
 Ddiff12=Dglut1/Dglut2;
 Ddiff23=Dglut2/Dglut3;
 %%
@@ -355,6 +345,9 @@ subplot(5,5,22);plot(R_dual(:,22));title('');set(gca,'XTickLabel',[0 0.05 0.1]);
 subplot(5,5,23);plot(R_dual(:,23));title('');set(gca,'XTickLabel',[0 0.05 0.1]);
 subplot(5,5,24);plot(R_dual(:,24));title('');set(gca,'XTickLabel',[0 0.05 0.1]);
 subplot(5,5,25);plot(R_dual(:,25));title('R_{edge}');set(gca,'XTickLabel',[0 0.05 0.1]);
+
+
+
 
 
 
