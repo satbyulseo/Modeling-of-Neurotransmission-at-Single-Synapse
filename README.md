@@ -44,7 +44,9 @@ Modeling-of-Neurotransmissions for Indepentdent Evoked and Spontaneous Release t
 
     
     3) Plot
+    
      % Center release
+        
         figure
         plot(probM_13,'r-');hold on;
         plot(probM_25,'b-.');hold on;
